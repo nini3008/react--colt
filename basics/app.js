@@ -1,6 +1,15 @@
 class Hello extends React.Component {
+  constructor() {
+    super();
+  }
+
+  name = () => {
+    const names = ["nick", "efe", "Koreem", "james", "Tia", "Fran"];
+    return names[Math.floor(Math.random() * names.length)];
+  };
+
   render() {
-    return <h1> Hello </h1>;
+    return <h1>Hello {this.name()}</h1>;
   }
 }
 
