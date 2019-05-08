@@ -4,7 +4,7 @@ class Hello extends React.Component {
   }
 
   name = () => {
-    const names = ["nick", "efe", "Koreem", "james", "Tia", "Fran"];
+    const names = ["nick", "efe", "👩🏽‍🌾", "james", "Tia", "Fran"];
     return names[Math.floor(Math.random() * names.length)];
   };
 
