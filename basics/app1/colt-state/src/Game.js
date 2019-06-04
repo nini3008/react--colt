@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//import Button from "./Button";
+import Clicker from "./Clicker";
 
 class Game extends Component {
   constructor(props) {
@@ -8,14 +10,11 @@ class Game extends Component {
       gameover: false
     };
   }
-  // state = {
-  //   score: 0,
-  //   gameover: false
-  // };
+
   render() {
     return (
       <div className="game">
-        <p>Your score is: {this.state.score}</p>
+        <Clicker />
       </div>
     );
   }
