@@ -1607,7 +1607,7 @@ var ENGLISH_WORDS = [
   "sensor",
   "manual",
   "pistol",
-  "naval",
+  "naval"
 ];
 
 function randomWord() {
