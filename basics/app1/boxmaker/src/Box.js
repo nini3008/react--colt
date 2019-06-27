@@ -5,13 +5,12 @@ class Box extends Component {
       <div>
         <div
           style={{
-            height: `${this.props.height}px`,
-            width: `${this.props.width}px `,
+            height: `${this.props.height}em`,
+            width: `${this.props.width}em `,
             backgroundColor: this.props.color
           }}
-        >
-          <button>x</button>
-        </div>
+        />
+        <button>x</button>
       </div>
     );
   }
