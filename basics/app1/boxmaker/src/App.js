@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div>
         <BoxList />
-        <Box />
+        <Box height={20} width={10} />
       </div>
     );
   }
