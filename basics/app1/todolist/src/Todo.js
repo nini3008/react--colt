@@ -6,7 +6,7 @@ class Todo extends Component {
       <div className="todoBg">
         <span>{this.props.task}</span>
         <span>Edit</span>
-        <span>Delete</span>
+        <span onClick={this.props.remove}>Delete</span>
       </div>
     );
   }
