@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Todo = () => {
-  return (
-    <div>
-      <h5>list</h5>
-    </div>
-  );
-};
+class Todo extends Component {
+  render() {
+    return (
+      <div className="todoBg">
+        <span>{this.props.task}</span>
+        <span>Edit</span>
+        <span>Delete</span>
+      </div>
+    );
+  }
+}
 
 export default Todo;
