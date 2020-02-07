@@ -60,6 +60,15 @@ const styles = {
     textTransform: "uppercase",
     border: "none",
     opacity: 0
+  },
+  boxContent: {
+    position: "absolute",
+    width: "100%",
+    left: "0px",
+    bottom: "0px",
+    letterSpacing: "1px",
+    textTransform: "uppercase",
+    fontSize: "12px"
   }
 };
 
@@ -103,7 +112,7 @@ class ColorBox extends Component {
           </div>
 
           <div className="copy-container">
-            <div className="box-content">
+            <div className={classes.boxContent}>
               <span className={classes.colorName}>{name}</span>
             </div>
             <button className={classes.copyButton}>Copy</button>
