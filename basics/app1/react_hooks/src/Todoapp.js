@@ -9,17 +9,22 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
 function Todoapp() {
+  // this variable is for the initial value for the to-doList.
+  // checks the localstorage for any ListItemSecondaryAction.
+  //  if none available, return an empty array
   const initialTodos = JSON.parse(window.localStorage.getItem("todos") || "[]");
+
+  // this is a destructered state hooks call
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
     initialTodos
   );
-  //const [todos, setTodos] = useState(initialTodos);
 
   useEffect(() => {
     window.localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
   return (
+    // paper, grid, appbar, are design ui components from material-ui
     <Paper
       style={{
         padding: 0,
@@ -36,7 +41,9 @@ function Todoapp() {
       </AppBar>
       <Grid container justify="center" style={{ marginTop: "1rem" }}>
         <Grid item xs={11} md={8} lg={4}>
+          {/* The todoform component that controls the task/list input. */}
           <TodoForm addTodo={addTodo} />
+          {/* The todolist component displays the list items entered. its populated from the form entry*/}
           <TodoList
             todos={todos}
             removeTodo={removeTodo}
