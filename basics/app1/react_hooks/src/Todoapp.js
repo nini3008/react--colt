@@ -19,6 +19,8 @@ function Todoapp() {
     initialTodos
   );
 
+  //use effect only fires once an effect happens but addding
+  // a [todos] parameter ensure it only fires when todo is updated
   useEffect(() => {
     window.localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
